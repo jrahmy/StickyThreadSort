@@ -1,0 +1,14 @@
+{
+    "option.j_sts.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "dbc31259c191d0fac6399444452e5eb6"
+    },
+    "option_explain.j_sts.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "be4d5ee3e8623e0c8b02ed071aad88c3"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "template=j_sts_option_template",
+    "data_type": "array",
+    "sub_options": [
+        "order",
+        "direction"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "default_value": "{\"order\":\"\",\"direction\":\"asc\"}",
+    "relations": {
+        "nodeList": 300
+    }
+}

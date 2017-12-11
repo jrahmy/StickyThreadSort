@@ -1,0 +1,25 @@
+<xf:formrow rowtype="input"
+	label="{$option.title}"
+	hint="{$hintHtml}"
+	explain="{$explainHtml}"
+	html="{$listedHtml}">
+
+	<div class="inputGroup u-inputSpacer">
+		<xf:select name="{$inputName}[order]" value="{$option.option_value.order}">
+			<xf:option value=""></xf:option>
+			<xf:option value="last_post_date">{{ phrase('last_message') }}</xf:option>
+			<xf:option value="post_date">{{ phrase('first_message') }}</xf:option>
+			<xf:option value="title">{{ phrase('title') }}</xf:option>
+			<xf:option value="reply_count">{{ phrase('replies') }}</xf:option>
+			<xf:option value="view_count">{{ phrase('views') }}</xf:option>
+			<xf:option value="first_post_likes">{{ phrase('first_message_likes') }}</xf:option>
+		</xf:select>
+
+		<span class="inputGroup-splitter"></span>
+
+		<xf:select name="{$inputName}[direction]" value="{$option.option_value.direction}">
+			<xf:option value="desc">{{ phrase('descending') }}</xf:option>
+			<xf:option value="asc">{{ phrase('ascending') }}</xf:option>
+		</xf:select>
+	</div>
+</xf:formrow>

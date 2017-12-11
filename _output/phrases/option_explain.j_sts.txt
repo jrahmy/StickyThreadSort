@@ -1,0 +1,1 @@
+If set, this will override any default or manual thread sorting for sticky threads.
