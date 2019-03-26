@@ -49,7 +49,9 @@ class Forum extends XFCP_Forum
                     };
                 }
 
-                $stickyThreads = $reply->getParam('stickyThreads');
+                /** @var \XF\Mvc\Entity\AbstractCollection $stickyThreads */
+                $stickyThreads = $reply->getParam('stickyThreads')
+                    ?: $this->em()->getEmptyCollection();
                 $stickyThreads = $stickyThreads->toArray();
 
                 $stickyThreads = \XF\Util\Arr::columnSort(
