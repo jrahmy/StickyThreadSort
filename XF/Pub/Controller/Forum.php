@@ -26,6 +26,7 @@ class Forum extends XFCP_Forum
         $reply = parent::actionForum($params);
 
         if ($reply instanceof \XF\Mvc\Reply\View) {
+            /** @var \XF\Mvc\Reply\View $reply */
             $options = $this->options()->jSts;
             $order = $options['order'];
             $direction = $options['direction'];
@@ -49,7 +50,9 @@ class Forum extends XFCP_Forum
                     };
                 }
 
-                $stickyThreads = $reply->getParam('stickyThreads');
+                /** @var \XF\Mvc\Entity\AbstractCollection $stickyThreads */
+                $stickyThreads = $reply->getParam('stickyThreads')
+                    ?: $this->em()->getEmptyCollection();
                 $stickyThreads = $stickyThreads->toArray();
 
                 $stickyThreads = \XF\Util\Arr::columnSort(
