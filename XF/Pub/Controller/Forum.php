@@ -31,7 +31,7 @@ class Forum extends XFCP_Forum
         $reply = parent::actionForum($params);
 
         if ($reply instanceof \XF\Mvc\Reply\View) {
-            $options = $this->options()->j_sts;
+            $options = $this->options()->jSts;
             $order = $options['order'];
             $direction = $options['direction'];
 
